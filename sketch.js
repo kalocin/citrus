@@ -55,19 +55,23 @@ function draw() {
     let hot = '#FAC511';
     background(221, 221, 221);
     for (var i = 0; i < boxes.length; i++) {
-
-
         boxes[i].show();
+        //fill(`rgb(${Math.round((boxes[i].body.position.y/height)*256)}, 50, 0)`)
+        
+        
         if (boxes[i].body.position.y > 0 && boxes[i].body.position.y < 250) {
             fill(burnt);
+            continue;
         }
     
         if (boxes[i].body.position.y > 250 && boxes[i].body.position.y < 500) {
             fill(hottest);
+            continue;
         }
     
         if (boxes[i].body.position.y > 500 && boxes[i].body.position.y < 750) {
             fill(hotter);
+            continue;
         }
     
         if (boxes[i].body.position.y > 750 && boxes[i].body.position.y < 1000) {
